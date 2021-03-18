@@ -1,6 +1,9 @@
 from api import get_api
 
-api = get_api()
-public_tweets = api.home_timeline()
-for tweet in public_tweets:
-    print(tweet.text)
+
+def main():
+    api = get_api()
+    gabriel = api.get_user('gabrnavas')
+    print(gabriel._json)
+
+main()
